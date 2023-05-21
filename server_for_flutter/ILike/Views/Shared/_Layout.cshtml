@@ -4,17 +4,51 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <title>ILike</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Добавлено свойство для скрытия полосы прокрутки по горизонтали */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #header {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            font-size: 24px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 5px;
+            background-color: #333;
+            color: #fff;
+            width: 100%;
+            margin-top: auto; /* Чтобы футер был прижат к нижней части страницы */
+        }
+    </style>
 </head>
 <body>
     <div id="header">
+        <p>Sports News</p>
     </div>
 
     @RenderBody()
+
     <footer class="footer">
         <p>
             Copyright &copy; 2023
             <br>All rights reserved
-        </p>     
+        </p>
     </footer>
 </body>
 </html>

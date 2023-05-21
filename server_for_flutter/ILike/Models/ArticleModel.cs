@@ -5,7 +5,7 @@ using System.Web;
 
 namespace ILike.Models
 {
-	public class Article
+	public class ArticleModel
 	{
 		public int id { get; set; }	
 		public string title { get; set; }

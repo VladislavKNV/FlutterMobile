@@ -5,8 +5,73 @@
 <html>
 <head runat="server">
     <title>My Website</title>
+    <style>
+        .Add_Article_block {
+            width: 600px;
+            margin: 60px auto 40px; /* Добавлен отступ сверху */
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .input_block {
+            margin-bottom: 10px;
+        }
+
+        .p_text {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .Title_Input,
+        .Url_Input,
+        .Content_Input {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .Content_Input {
+            height: 200px;
+            resize: vertical;
+        }
+
+        .btn {
+            display: block; /* Делаем кнопку блочным элементом */
+            margin: 0 auto; /* Устанавливаем автоматические отступы по горизонтали */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn_auto {
+            width: auto;
+        }
+    </style>
 </head>
 <body>
-    <p>Ok</p>
+    <form method="post" action="~/Home/mainPage">
+        <div class="Add_Article_block">
+
+            <p>@ViewBag.OperationStatus</p>
+            <div class="input_block">
+                <p class="p_text">Title</p>
+                <input id="title" name="title" type="text" class="Title_Input" />
+            </div>
+
+            <div class="input_block">
+                <p class="p_text">urlImage</p>
+                <input id="urlImage" name="urlImage" type="text" class="Url_Input" />
+            </div>
+
+            <div class="input_block">
+                <p class="p_text">Content</p>
+                <textarea id="Content" name="Content" class="Content_Input"></textarea>
+            </div>
+
+            <input class="btn btn_auto" type="submit" value="Опубликовать" />
+        </div>
+    </form>
 </body>
 </html>

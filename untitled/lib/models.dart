@@ -1,3 +1,9 @@
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+
+String loginForCom = "null";
+
 class NewsModel {
   final int id;
   final String title;
