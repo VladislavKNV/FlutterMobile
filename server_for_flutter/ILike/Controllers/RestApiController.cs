@@ -20,6 +20,7 @@ namespace ILike.Controllers
 		public IHttpActionResult GetArticlesApi()
 		{
 			var articlesList = repositoryDB.GetArticle();
+			articlesList.Reverse();
 			return Json(articlesList);
 		}
 
